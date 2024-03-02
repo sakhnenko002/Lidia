@@ -1,0 +1,90 @@
+@import "variables";
+@mixin adaptive-font($pcSize, $fzTablet) {
+    $addSize: $pcSize - $fzTablet;
+    $addTabletSize: $addSize + $addSize * 0.7;
+  
+    @media (max-width: $tablet) {
+      font-size: calc(
+        #{$fzTablet + px} + #{$addTabletSize} *
+          ((100vw - 320px) / #{$maxWidthsAdpt})
+      );
+    }
+  
+    // @media (min-width: $tablet) {
+    //   font-size: calc(
+    //     #{$fzTablet + px} + #{$addTabletSize} * (100vw / #{$maxWidthsAdpt})
+    //   );
+    // }
+  }
+.feature {
+  margin-top: 130px;
+  margin-bottom: 200px;
+  .feature__container {
+    .small__title {
+      color: $colorPrimary;
+      font-size: $fzSmallTitle;
+      font-weight: 800;
+      letter-spacing: 2px;
+      font-size: $fzSmallTitle;
+      line-height: normal;
+    }
+    .big__title {
+      color: $colorBigTitle;
+      font-size: $fzBigTitle;
+      @include adaptive-font(48,30);
+      font-weight: 800;
+      margin-top: 10px;
+      line-height: 65px;
+    }
+    .feature__list {
+      display: flex;
+     
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 20px;
+      margin-top: 90px;
+      @media (max-width:$tablet) {
+        justify-content: center;
+      }
+      .feature__item {
+        flex: 0 1 280px;
+        display: grid;
+        gap: 20px;
+        justify-items: center;
+        text-align: center;
+        transition: all 0.3s ease 0s;
+        &:hover {
+          
+          transform: translateY(-7px);
+        }
+        &:active {
+          transform: translateY(-1px);
+        }
+        > div {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          max-width: 102px;
+          width: 100%;
+          height: 102px;
+          background-color: $colorPrimary;
+          box-shadow: 0 30px 60px 0 rgba(71, 74, 87, 0.25);
+          border-radius: 26px;
+          
+        }
+        > h3 {
+          color: $colorTitleFeat;
+          font-size: 24px;
+          font-weight: 700;
+          line-height: normal;
+        }
+        > p {
+          color: $colorTextFeat;
+          font-weight: 500;
+          line-height: 30px;
+          text-align: center;
+        }
+      }
+    }
+  }
+}

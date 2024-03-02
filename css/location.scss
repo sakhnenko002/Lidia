@@ -1,0 +1,48 @@
+@import "variables";
+@mixin adaptive-font($pcSize, $fzTablet) {
+  $addSize: $pcSize - $fzTablet;
+  $addTabletSize: $addSize + $addSize * 0.7;
+
+  @media (max-width: $tablet) {
+    font-size: calc(
+      #{$fzTablet + px} + #{$addTabletSize} *
+        ((100vw - 320px) / #{$maxWidthsAdpt})
+    );
+  }
+
+  // @media (min-width: $tablet) {
+  //   font-size: calc(
+  //     #{$fzTablet + px} + #{$addTabletSize} * (100vw / #{$maxWidthsAdpt})
+  //   );
+  // }
+}
+.location {
+  margin-bottom: 240px;
+  .location__container {
+    .small__title {
+      color: $colorPrimary;
+      font-size: $fzSmallTitle;
+      font-weight: 800;
+      letter-spacing: 2px;
+      font-size: $fzSmallTitle;
+      line-height: normal;
+    }
+    .big__title {
+      color: $colorBigTitle;
+      font-size: $fzBigTitle;
+      @include adaptive-font(48, 30);
+      font-weight: 800;
+      margin-top: 10px;
+      line-height: 65px;
+      margin-bottom: 90px;
+    }
+
+    .location__map {
+      box-shadow: 0 30px 60px 0 rgba(71, 74, 87, 0.25);
+      border-radius: 10px;
+      max-width: 1230px;
+      width: 100%;
+    
+    }
+  }
+}

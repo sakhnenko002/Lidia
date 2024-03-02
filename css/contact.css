@@ -1,0 +1,23 @@
+.contact {
+  margin-bottom: 94px;
+}
+.contact .contact__container .grid__contacts {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  justify-items: center;
+  align-items: center;
+  gap: 20px;
+}
+@media (max-width: 991.98px) {
+  .contact .contact__container .grid__contacts {
+    display: flex;
+    flex-direction: column;
+  }
+}
+.contact .contact__container .grid__contacts .social {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+}/*# sourceMappingURL=contact.css.map */

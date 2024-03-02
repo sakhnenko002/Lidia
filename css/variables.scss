@@ -1,0 +1,87 @@
+//GLOBA;
+$maxWidthsAdpt: 1440;
+
+$minWidth: 320px;
+$maxWidth: 1440px;
+$maxWidthContainer: 1230px;
+$containerPadding: 30px;
+
+$containerWidth: $maxWidthContainer + $containerPadding;
+
+$pc: $containerWidth;
+$tablet: 991.98px;
+$mobile: 767.98px;
+$mobileSmall: 479.98px;
+
+$responsiveType: 1;
+
+$fzGlobal:16px;
+$ffGlobal:'Plus Jakarta Display', sans-serif;
+$colorDesc:#5E6282;
+$colorPrimary: #4475F2;
+$colorPrimaryMobile: #4475f29a;
+$colorHeading: #181E4B;
+
+// MENU--NAV
+$colorMenu:#9A9EA6;
+$colorMenuHov:#4737FF;
+$fzMenu:14px;
+
+//H1
+$fzMainTitle:76px;
+$colorMainTitle: $colorHeading; //HEADING
+$colorUnderLineTxt:#4475F2;        
+
+
+//Text-HEADER
+
+$colorHeaderTxt: $colorDesc; //DESC
+
+
+
+//BTH-HERO 
+$colorButton:$colorPrimary; //PRIMARY
+$colorTextButton:#fff;
+
+
+//TITLE--SECTIONS
+// (<div> --- <h2>)
+
+$colorSmallTitle:$colorButton;
+$fzSmallTitle:18px;
+//---------------------------
+$colorBigTitle:#000;
+$fzBigTitle:48px;
+
+
+///LIST--FEATURES
+
+$colorTitleFeat:#000;
+//----------------------
+$colorTextFeat:$colorDesc;
+
+
+//BLOCK---SERVICE
+$colorTitleService: #000;
+$fzTitleService:32px;
+//-------------------------
+$colorTextService:$colorDesc;
+
+//LIST CARD---REVIEWS
+$colorTextRewTop:$colorDesc;
+//--------------------------
+$colorTextRewCenter:#23A6F0;
+//--------------------------
+$colorTextRewBottom: $colorHeading;
+
+
+//LOCATION
+$colorTextLoc:#000;
+$fzTextLoc:24px;
+
+//FOOTER
+$colorFooter:#fff;
+$fzFooter:14px;
+
+
+

@@ -1,0 +1,71 @@
+@import "null";
+@import "variables";
+@import "header";
+@import "hero";
+@import "features"; 
+@import "service";
+@import "reviews";
+@import "location";
+@import "contact";
+@import "footer";
+@import url(https://fonts.googleapis.com/css?family=Plus+Jakarta+Sans:200,regular,500,700,800);
+
+@if $responsiveType == 1 {
+    [class*="__container"] {
+      @if $maxWidthContainer > 0 {
+        max-width: $containerWidth;
+        margin: 0 auto;
+      }
+  
+      @if $containerPadding > 0 {
+        @if $maxWidthContainer > 0 {
+          padding: 0 $containerPadding / 2; // Змінив тут
+        } @else {
+          @include adaptiveValue(
+            "padding-left",
+            $containerPadding / 2,
+            15
+          ); // Змінив тут
+          @include adaptiveValue(
+            "padding-right",
+            $containerPadding / 2,
+            15
+          ); // Змінив тут
+        }
+      }
+    }
+  }
+  
+  .wrapped {
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+    overflow: clip;
+  }
+
+  body {
+    font-family: $ffGlobal;
+  }
+
+
+  // .page {
+
+  // }
+
+  @mixin adaptive-font($pcSize, $fzTablet) {
+    $addSize: $pcSize - $fzTablet;
+    $addTabletSize: $addSize + $addSize * 0.7;
+  
+    @media (max-width: $tablet) {
+      font-size: calc(
+        #{$fzTablet + px} + #{$addTabletSize} *
+          ((100vw - 320px) / #{$maxWidthsAdpt})
+      );
+    }
+  
+    // @media (min-width: $tablet) {
+    //   font-size: calc(
+    //     #{$fzTablet + px} + #{$addTabletSize} * (100vw / #{$maxWidthsAdpt})
+    //   );
+    // }
+  }

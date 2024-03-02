@@ -1,0 +1,15 @@
+@import "variables";
+
+
+.footer {
+    padding: 51px 0px;
+    background-color: $colorPrimary;
+    .footer__container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        >p {
+                color: #fff;
+        }
+    }
+}

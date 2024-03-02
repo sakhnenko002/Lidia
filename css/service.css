@@ -1,0 +1,73 @@
+.service {
+  margin-bottom: 200px;
+}
+.service .service__container .small__title {
+  color: #4475F2;
+  font-size: 18px;
+  font-weight: 800;
+  letter-spacing: 2px;
+  font-size: 18px;
+  line-height: normal;
+}
+.service .service__container .big__title {
+  color: #000;
+  font-size: 48px;
+  font-weight: 800;
+  margin-top: 10px;
+  line-height: 65px;
+  margin-bottom: 90px;
+}
+@media (max-width: 991.98px) {
+  .service .service__container .big__title {
+    font-size: calc(30px + 30.6 * (100vw - 320px) / 1440);
+  }
+}
+.service .service__container .block__about__book__cont {
+  gap: 140px;
+  display: flex;
+  flex-direction: column;
+}
+.service .service__container .block__about__book__cont .block__about__book {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 20px;
+}
+@media (max-width: 991.98px) {
+  .service .service__container .block__about__book__cont .block__about__book {
+    flex-direction: column;
+  }
+}
+.service .service__container .block__about__book__cont .block__about__book > img {
+  width: 100%;
+  height: auto;
+  transition: all 0.3s ease 0s;
+}
+.service .service__container .block__about__book__cont .block__about__book > img:hover {
+  transform: translateY(-7px);
+}
+.service .service__container .block__about__book__cont .block__about__book > img:active {
+  transform: translateY(-1px);
+}
+.service .service__container .block__about__book__cont .block__about__book .info__book {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+.service .service__container .block__about__book__cont .block__about__book .info__book > h3 {
+  color: #000;
+  font-size: 32px;
+  font-weight: 500;
+  margin-bottom: 25px;
+}
+@media (max-width: 991.98px) {
+  .service .service__container .block__about__book__cont .block__about__book .info__book > h3 {
+    font-size: calc(20px + 20.4 * (100vw - 320px) / 1440);
+  }
+}
+.service .service__container .block__about__book__cont .block__about__book .info__book > h3 > strong {
+  color: #4475F2;
+}
+.service .service__container .block__about__book__cont .block__about__book .info__book > p {
+  color: #5E6282;
+}/*# sourceMappingURL=service.css.map */

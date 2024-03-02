@@ -1,0 +1,30 @@
+.location {
+  margin-bottom: 240px;
+}
+.location .location__container .small__title {
+  color: #4475F2;
+  font-size: 18px;
+  font-weight: 800;
+  letter-spacing: 2px;
+  font-size: 18px;
+  line-height: normal;
+}
+.location .location__container .big__title {
+  color: #000;
+  font-size: 48px;
+  font-weight: 800;
+  margin-top: 10px;
+  line-height: 65px;
+  margin-bottom: 90px;
+}
+@media (max-width: 991.98px) {
+  .location .location__container .big__title {
+    font-size: calc(30px + 30.6 * (100vw - 320px) / 1440);
+  }
+}
+.location .location__container .location__map {
+  box-shadow: 0 30px 60px 0 rgba(71, 74, 87, 0.25);
+  border-radius: 10px;
+  max-width: 1230px;
+  width: 100%;
+}/*# sourceMappingURL=location.css.map */

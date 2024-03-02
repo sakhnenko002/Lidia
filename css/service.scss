@@ -1,0 +1,86 @@
+@import "variables";
+@mixin adaptive-font($pcSize, $fzTablet) {
+  $addSize: $pcSize - $fzTablet;
+  $addTabletSize: $addSize + $addSize * 0.7;
+
+  @media (max-width: $tablet) {
+    font-size: calc(
+      #{$fzTablet + px} + #{$addTabletSize} *
+        ((100vw - 320px) / #{$maxWidthsAdpt})
+    );
+  }
+
+  // @media (min-width: $tablet) {
+  //   font-size: calc(
+  //     #{$fzTablet + px} + #{$addTabletSize} * (100vw / #{$maxWidthsAdpt})
+  //   );
+  // }
+}
+.service {
+    margin-bottom: 200px;
+  .service__container {
+    .small__title {
+      color: $colorPrimary;
+      font-size: $fzSmallTitle;
+      font-weight: 800;
+      letter-spacing: 2px;
+      font-size: $fzSmallTitle;
+      line-height: normal;
+    }
+    .big__title {
+      color: $colorBigTitle;
+      font-size: $fzBigTitle;
+      @include adaptive-font(48, 30);
+      font-weight: 800;
+      margin-top: 10px;
+      line-height: 65px;
+      margin-bottom: 90px;
+    }
+    .block__about__book__cont {
+        gap: 140px;
+        display: flex;
+        flex-direction: column;
+        .block__about__book {
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            gap: 20px;
+            @media (max-width: $tablet) {
+              flex-direction: column;
+              
+            }
+            > img {
+              width: 100%;
+              height: auto;
+              transition: all 0.3s ease 0s;
+              &:hover {
+                
+                transform: translateY(-7px);
+              }
+              &:active {
+                transform: translateY(-1px);
+              }
+            }
+            .info__book {
+              display: flex;
+              flex-direction: column;
+              gap: 15px;
+              > h3 {
+                color: #000;
+                font-size: 32px;
+                @include adaptive-font(32, 20);
+                font-weight: 500;
+                margin-bottom: 25px;
+                >strong {
+                      color: #4475F2;
+                }
+              }
+              > p {
+                  color: $colorTextService;
+              }
+            }
+          }
+    }
+    
+  }
+}

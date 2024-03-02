@@ -1,0 +1,12 @@
+.footer {
+  padding: 51px 0px;
+  background-color: #4475F2;
+}
+.footer .footer__container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.footer .footer__container > p {
+  color: #fff;
+}/*# sourceMappingURL=footer.css.map */

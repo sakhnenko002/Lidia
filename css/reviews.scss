@@ -1,0 +1,88 @@
+@import "variables";
+@mixin adaptive-font($pcSize, $fzTablet) {
+  $addSize: $pcSize - $fzTablet;
+  $addTabletSize: $addSize + $addSize * 0.7;
+
+  @media (max-width: $tablet) {
+    font-size: calc(
+      #{$fzTablet + px} + #{$addTabletSize} *
+        ((100vw - 320px) / #{$maxWidthsAdpt})
+    );
+  }
+
+  // @media (min-width: $tablet) {
+  //   font-size: calc(
+  //     #{$fzTablet + px} + #{$addTabletSize} * (100vw / #{$maxWidthsAdpt})
+  //   );
+  // }
+}
+.reviews {
+  margin-bottom: 200px;
+  .reviews__container {
+    .small__title {
+      color: $colorPrimary;
+      font-size: $fzSmallTitle;
+      font-weight: 800;
+      letter-spacing: 2px;
+      font-size: $fzSmallTitle;
+      line-height: normal;
+    }
+    .big__title {
+      color: $colorBigTitle;
+      font-size: $fzBigTitle;
+      @include adaptive-font(48, 30);
+      font-weight: 800;
+      margin-top: 10px;
+      line-height: 65px;
+      margin-bottom: 90px;
+    }
+    .reviews__list {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 51px;
+  
+      .reviews__items {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 40px;
+        max-width: 366px;
+        width: 100%;
+        border-top: 1px solid #dedede;
+        box-shadow: 0 2.767256498336792px 2.2138051986694336px 0
+            rgba(0, 0, 0, 0.02),
+          0 6.650102138519287px 5.32008171081543px 0 rgba(0, 0, 0, 0.03),
+          0 12.521552085876465px 10.017241477966309px 0 rgba(0, 0, 0, 0.04),
+          0 22.3363094329834px 17.869047164916992px 0 rgba(0, 0, 0, 0.04),
+          0 41.777610778808594px 33.422088623046875px 0 rgba(0, 0, 0, 0.05),
+          0 100px 80px 0 rgba(0, 0, 0, 0.07);
+        padding: 50px;
+        flex: 1 1 280px;
+        transition: all 0.3s ease 0s;
+        &:hover {
+          
+          transform: translateY(-7px);
+        }
+        &:active {
+          transform: translateY(-1px);
+        }
+        > p {
+          text-align: center;
+          line-height: 30px;
+          letter-spacing: 0.20000000298023224px;
+          font-weight: 500;
+          color: $colorDesc;
+        }
+        .name {
+          color: $colorTextRewCenter;
+          font-weight: 500;
+        }
+        .education {
+          color: $colorTextRewBottom;
+          font-weight: 500;
+        }
+      }
+    }
+  }
+}
